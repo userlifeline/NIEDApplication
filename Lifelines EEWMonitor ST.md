@@ -231,6 +231,16 @@ __基本的に放置で問題ありません。__ 緊急地震速報発表時に
           </td>
           <td>2022-06-07</td>
         </tr>
+        <tr>
+          <td>1.0.0.6</td>
+          <td>
+            <ul>
+              <li>更新に関する設定を引数で行える機能を追加</li>
+              <li>ネットワーク切断時に情報取得をキャンセルする機能を追加</li>
+            </ul>
+          </td>
+          <td>2022-08-03</td>
+        </tr>
     </tbody>
 </table>
 
@@ -238,6 +248,22 @@ __基本的に放置で問題ありません。__ 緊急地震速報発表時に
 
 更新予定はありません。
 
+## 引数
+
+起動時に以下の引数を指定することで特定の動作をすることができます。
+引数には指定がない限り"(ダブルクォーテーション)を使用しないでください。
+
+- __no-updatecheck__: 更新確認をスキップする
+- __no-tryupdateconnection__: 更新確認時に複数のページからの情報を取得しようとしない
+- __no-notifymessage__: 優先接続先に接続できなかった時に接続先を変更した旨のメッセージを送信しない
+- __priority(server)=<servername>__: <servername>を優先的に取得するページに設定する
+
+<servername>については次の通りです: github1, github2, github3
+
+次のように設定します。
+
+priority=github1 または priorityserver=github1 または priority = github1
+  
 ## 注意
 
 - アプリケーションの利用規約に関しては「[Lifeline's Appシリーズ 利用規約](https://sites.google.com/view/lifelines-rules/lifelines-app%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84)(キャプチャ以外の機能について第2章-第5条-第1項除く)」、「[Lifeline's Appエンドユーザーライセンス事項](https://sites.google.com/view/lifelines-rules/lifelines-app%E3%82%A8%E3%83%B3%E3%83%89%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E4%BA%8B%E9%A0%85)」、「[プライバシーポリシー](https://sites.google.com/view/lifelines-rules/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC)」を適用します。
@@ -250,7 +276,7 @@ __基本的に放置で問題ありません。__ 緊急地震速報発表時に
 
 ### 開発支援
 
- - > taiifun-dairekuto様 [Twitter](https://twitter.com/taifun_dairekut)
+ - > taifun-dairekuto様 [Twitter](https://twitter.com/taifun_dairekut)
  - ベータ版より開発に参加されている方々
 
 ## THANKS
